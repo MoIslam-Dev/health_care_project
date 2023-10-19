@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 90%;
+    display: flex;
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, .08);
+}
+
+.wrapper .left {
+    width: 35%;
+    background: linear-gradient(to bottom, #6C63FF, #333333);
+    padding: 30px 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.wrapper .left img {
+    margin-bottom: 10px;
+    width: 85%;
+    object-fit: cover;
+    height: 40%;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.wrapper .left h4 {
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+
+
+.wrapper .left p {
+    font-size: 12px;
+}
+
+.wrapper .right {
+    width: 65%;
+    background: #fff;
+    padding: 30px 25px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.wrapper .right .info,
+.wrapper .right .projects {
+    margin-bottom: 25px;
+}
+
+.wrapper .right .info h3,
+.wrapper .right .projects h3 {
+    
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #353c4e;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.wrapper .right .info_data,
+.wrapper .right .projects_data {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper .right .info_data .data,
+.wrapper .right .projects_data .data {
+    width: 45%;
+}
+
+.wrapper .right .info_data .data h4,
+.wrapper .right .projects_data .data h4 {
+
+    
+
+    font-size: large;
+    color: #353c4e;
+    margin-bottom: 5px;
+}
+
+.wrapper .right .info_data .data p,
+.wrapper .right .projects_data .data p {
+    font-size: medium;
+    margin-bottom: 10px;
+    color: #919aa3;
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .wrapper .left {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 20px;
+    }
+
+    .wrapper .right {
+        width: 100%;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .wrapper .right .info_data .data,
+    .wrapper .right .projects_data .data {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .wrapper .left {
+        width: 100%;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .wrapper .left img {
+        width: 100%;
+        height: auto;
+    }
+
+    .wrapper .right {
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 5px;
+        padding-top: 20px;
+    }
+
+    .wrapper .right .info_data,
+    .wrapper .right .projects_data {
+        flex-direction: column;
+    }
+}
+
+
+.slide-container {
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.slide-content {
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+
+.card {
+    border-radius: 25px;
+    background-color: #FFF;
+}
+
+/* Add this CSS code to your existing styles */
+
+.slide-content {
+    display: flex;
+}
+
+.Healthcare-insights {
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.vaccine,
+.allergies,
+.diseases {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.Consultation {
+    flex: 3;
+}
+
+.vaccine {
+    border-right: none;
+}
+
+.diseases {
+    border-left: none;
+}
+
+h3 {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.example {
+    display: flex;
+    justify-content: space-between;
+}
+
+.example p {
+    margin: 0;
+}
+
+/* Styling for the consultation section */
+.consultation-section {
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.consultation-info {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+td ul {
+    padding: 0;
+    margin: 0;
+}
+
+td ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 30px;
+    list-style: none;
+}
+
+td ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(45deg, #040407, #000000);
+    border-radius: 50%;
+}
+
+
+
+tfoot {
+    background-color: #999999;
+}
+
+.centered-cell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.note p {
+    font-size: large;
+}
+
+
+#date-table,
+#doctor-table {
+    color: #fff;
+    background-color: #333;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .consultation-info {
+        flex-direction: column;
+    }
+
+    .consultation-info p {
+        margin-bottom: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    td ul li {
+        padding-left: 20px;
+    }
+}
+
+/* Styling for the document section */
+.slide-scrollable {
+    height: 500px;
+    /* Set the maximum height for the scrollable area */
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+}
+
+.document-section {
+    background-color: #ffffff;
+    height: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.document-image {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.document-image img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+
+}
+
+.document-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+}
+
+.document-info {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+
+
+
+
+.document-image p {
+    font-size: larger;
+}
+
+.comment-section {
+    margin-top: 20px;
+}
+
+.doctor-comment p {
+    margin: 10px;
+    font-size: large;
+    color: #333333;
+}
+
+.user-input textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.user-input textarea::placeholder {
+    color: #999999;
+    font-size: medium;
+}
+
+.button {
+    background-color: #6C63FF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #265DF2;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .document-image img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .document-info,
+    .doctor-comment p,
+    .user-input textarea {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+.swiper-navBtn {
+    color: #6E93f7;
+    transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+    color: #6C63FF;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 35px;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: #6E93f7;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #6C63FF;
+}

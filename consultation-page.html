@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Josefin Sans', sans-serif;
+}
+        /* Styles for the Consultation Content */
+        .consultation-section {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h3 {
+            color: #6C63FF;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .consultation-info {
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            table-layout: fixed;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background-color: #6C63FF;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 0;
+            list-style-type: square;
+            
+        }
+
+        .centered-cell {
+            text-align: center;
+        }
+
+        .note {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .consultation-button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .add-consultation-btn {
+            background-color: #6C63FF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-consultation-btn i {
+            margin-right: 5px;
+           
+        }
+
+        .add-consultation-btn:hover {
+            background-color: #514bc4;
+        }
+
+        /* Styles for the Modal Box */
+          /* Styles for the Modal Box */
+      /* Styles for the Modal Box */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.6);
+        animation: fade-in 0.5s ease-in-out;
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        animation: slide-up 0.5s ease-in-out;
+    }
+
+    @keyframes slide-up {
+        from {
+            transform: translateY(50px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.5s;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-form {
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        .modal-form input[type="text"],
+        .modal-form input[type="number"],
+        .modal-form input[type="date"],
+        .modal-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .save-btn {
+            background-color: #6C63FF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .save-btn:hover {
+            background-color: #514bc4;
+        }
+
+        /* Styles for the Popup Modal */
+        #popupModal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        #popupModal .modal-content {
+            background-color: #f1f1f1;
+            margin: 20% auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #popupModal .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #popupModal .close:hover,
+        #popupModal .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #popupModal h2 {
+            color: #6C63FF;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #popupModal p {
+            margin-bottom: 0;
+        }
+
+        #popupModal i {
+            margin-left: 5px;
+            color: #6C63FF;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Consultation Content -->
+    <div class="consultation-section">
+        <h3>Medication Document</h3>
+
+        <div class="consultation-info">
+            <p>Date of Consultation: <span id="date">June 19, 2023</span></p>
+            <p>Doctor's Name: <span id="doctor">Abdelmoumen Aymen</span></p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Number of Consultation</th>
+                    <th>Medication Name</th>
+                    <th>Dose</th>
+                    <th>Time of Day</th>
+                    <th>Period</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Paracetamol</td>
+                    <td>500 mg</td>
+                    <td>
+                        <ul>
+                            <li>In the morning</li>
+                            <li>In the afternoon</li>
+                            <li>In the evening</li>
+                        </ul>
+                    </td>
+                    <td>5 days</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Amoxicillin</td>
+                    <td>250 mg</td>
+                    <td>
+                        <ul>
+                            <li>In the morning</li>
+                        </ul>
+                    </td>
+                    <td>7 days</td>
+                </tr>
+                <!-- Add more rows for additional medications -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" class="centered-cell">
+                        <!-- Adjust the colspan based on the number of columns in your table -->
+                        <div class="note">
+                            <p>Additional notes go here</p>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="consultation-info">
+            <p>Date of Consultation: <span id="date">June 19, 2023</span></p>
+            <p>Doctor's Name: <span id="doctor">Abdelmoumen Aymen</span></p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Number of Consultation</th>
+                    <th>Medication Name</th>
+                    <th>Dose</th>
+                    <th>Time of Day</th>
+                    <th>Period</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Paracetamol</td>
+                    <td>500 mg</td>
+                    <td>
+                        <ul>
+                            <li>In the morning</li>
+                            <li>In the afternoon</li>
+                            <li>In the evening</li>
+                        </ul>
+                    </td>
+                    <td>5 days</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" class="centered-cell">
+                        <!-- Adjust the colspan based on the number of columns in your table -->
+                        <div class="note">
+                            <p>Additional notes go here</p>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Add New Consultation Modal -->
+        <div id="addConsultationModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Add New Consultation</h3>
+                <h4>Dr. Abdelmoumen Aymen</h4>
+                <form class="modal-form">
+                    <label for="consultationDate">Date of Consultation:</label>
+                    <input type="date" id="consultationDate" name="consultationDate">
+
+                    <label for="consultationNumber">Number of Consultation:</label>
+                    <input type="number" id="consultationNumber" name="consultationNumber">
+
+                    <label for="medicationName">Medication Name:</label>
+                    <input type="text" id="medicationName" name="medicationName">
+
+                    <label for="dose">Dose:</label>
+                    <input type="text" id="dose" name="dose">
+
+                    <label for="timeOfDay">Time of Day:</label>
+                    <select id="timeOfDay">
+                        <option value="">Select a time</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="evening">Evening</option>
+                    </select>
+
+                    <label for="period">Period:</label>
+                    <input type="text" id="period" name="period">
+
+                    <button class="save-btn" type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+        <!-- Popup Modal -->
+        <div id="popupModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Thank You!</h2>
+                <p id="popupMessage">The consultation has been added successfully.<i class="fas fa-check-circle"></i>
+                </p>
+            </div>
+        </div>
+        <div class="consultation-button-container">
+            <button class="add-consultation-btn"><i class="fas fa-plus"></i> Add New Consultation</button>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Modal functionality
+        var modal = document.getElementById("addConsultationModal");
+        var addBtn = document.getElementsByClassName("add-consultation-btn")[0];
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        addBtn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Handle form submission
+        const form = document.querySelector('.modal-form');
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            modal.style.display = "none"; // Close the modal after form submission
+            showPopupModal();
+        });
+        // Show the popup modal
+        function showPopupModal() {
+            const popupModal = document.getElementById('popupModal');
+            popupModal.style.display = 'block';
+        }
+
+        // Close the popup modal when the close button is clicked
+        const popupCloseButton = document.querySelectorAll('#popupModal .close');
+        popupCloseButton.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const popupModal = button.parentElement.parentElement;
+                popupModal.style.display = 'none';
+            });
+        });
+    </script>
+
+</body>
+
+</html>

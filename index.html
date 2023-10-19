@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Website</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="image/logo_noText.png" class="our-logo">
+            <span class="logo-text">EDEN hub</span>
+        </div>
+
+       
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#services">services</a>
+            <a href="#about">about</a>
+            <a href="#contact">contact</a>
+            <a href="#review">review</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-medkit"></div>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Bridging the Gap between Doctors and Patients in Algeria</h3>
+            <p>We're revolutionizing healthcare in Algeria by connecting doctors and patients like never before.
+                Our platform streamlines appointments, information, and care for a seamless experience.
+                Join us in transforming healthcare in Algeria today!</p>
+            <a href="#contact" class="btn"> Quick contact with us <span class="fas fa-chevron-right"></span> </a>
+        </div>
+        <div class="login">
+            <h1>Sign In</h1>
+            <form method="post" content-type="application/json" action="authenticate">
+                <div class="txt_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Username</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div class="pass">Forgot Password?</div>
+                <div class="centred-button"><a href="profile_doctor.html" class="btn" type="submit"> Sign In <span
+                            class="fas fa-user"></span>
+                    </a></div>
+
+
+            </form>
+        </div>
+
+
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- icons section starts  -->
+
+    <section class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-user-md"></i>
+            <h3>456+</h3>
+            <p>doctors with us</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-city"></i>
+            <h3>58</h3>
+            <p>we are in 58 willaya</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-hospital"></i>
+            <h3>1150+</h3>
+            <p>Hospital receiving our services</p>
+        </div>
+
+
+
+    </section>
+
+    <!-- icons section ends -->
+
+    <!-- services section starts  -->
+
+    <section class="services" id="services">
+
+        <h1 class="heading"> our <span>services</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-file-medical"></i>
+                <h3>Efficient Clinical <br> Data Management</h3>
+                <p>Quick and easy access, storage, and retrieval of well clinical data organized efficiently</p>
+                <a href="#services" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-chart-line"></i>
+                <h3>Instant Health Insights</h3>
+                <p>Receive real-time, valuable insights and analytics about various health-related aspects</p>
+                <a href="#services" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-cloud-download-alt"></i>
+                <h3>Effortless Health Record Retrieval</h3>
+                <p>Eliminate manual paperwork by providing quick access to the patient's medical history in digital form</p>
+                <a href="#services" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-qrcode"></i>
+                <h3>Secure QR-Code Authentication</h3>
+                <p>Ensure secure access to the patient's information via state-of-the-art technologies</p>
+                <a href="#services" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Insights for Informed Healthcare Decisions</h3>
+                <p>Recieve up-to-date information for better-informed decision-making and effective treatment plans</p>
+                <a href="#services" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-lock"></i>
+                <h3>Secure Data Access and Management</h3>
+                <p>Protect sensitive health data with robust security measures, safeguarding the privacy of our users</p>
+                <a href="#services" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- services section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>about</span> us </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="image/about-img.svg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>Building a Healthier Algeria Together</h3>
+                <p>we are revolutionizing the way healthcare is delivered in Algeria. Our innovative platform connects
+                    doctors and patients like never before, aiming to provide a positive experience for both parties.</p>
+                <p>With our advanced technology and comprehensive database, doctors gain instant access to their
+                    patients' medical history, medication records, and analytical insights. By streamlining the
+                    information retrieval process, we empower doctors to make well-informed decisions and provide
+                    personalized care to each patient.</p>
+                <a href="#about" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+
+
+    <!-- contacting section starts   -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"> <span>Contact</span> Us </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="image/book-img.svg" alt="">
+            </div>
+
+            <form id="myForm">
+                <h3>Send us an email</h3>
+                <input type="text" placeholder="your name" class="box">
+                <input type="number" placeholder="your number" class="box">
+                <input type="email" placeholder="your email" class="box">
+                <!--<input type="date" class="box">-->
+                <textarea rows="4" cols="50" class="box" placeholder="let us know...!"></textarea>
+
+                <input type="button" onclick="myFunction()" value="Send now" class="btn">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- contacting section ends -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> doctor <span>reviews</span> </h1>
+
+
+        <div class="swiper-container review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="image/pic-1.png" alt="">
+                        <div class="user-info">
+                            <h3>Fatima Kaidi</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>This software has helped me extensively in my work at the clinic.
+                        I am really amazed at for the beautiful layout and performance overall.
+                    </p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="image/pic-2.png" alt="">
+                        <div class="user-info">
+                            <h3>Karim Bouzid</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>As a doctor, I highly recommend this website for its efficient clinical data management.
+                        It has greatly improved my workflow by streamlining patient information, making it easy to access and update.
+                        It has definitely enhanced the quality of care I provide.</p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="image/pic-3.png" alt="">
+                        <div class="user-info">
+                            <h3>Salma Chaoui</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>I am amazed by the instant health insights provided by this website.
+                        It allows me to stay updated with the latest medical trends and research,
+                        enabling me to provide the best treatment options to my patients.
+                        The real-time analytics are invaluable in making informed healthcare decisions.</p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="image/pic-4.png" alt="">
+                        <div class="user-info">
+                            <h3>Youssef nasri</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>This website has revolutionized health record retrieval for me and my patients.
+                        It saves us time and effort by eliminating the need for manual paperwork.
+                        With just a few clicks, I can access comprehensive medical histories,
+                        leading to more accurate diagnoses and personalized treatment plans.</p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="image/pic-5.png" alt="">
+                        <div class="user-info">
+                            <h3>Amina hasna</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The personalized QR code authentication and fingerprint reading features of this website are outstanding.
+                        They ensure that only authorized individuals can access patient data, maintaining confidentiality and privacy.
+                        I feel confident knowing that sensitive information is well protected</p>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="image/pic-6.png" alt="">
+                        <div class="user-info">
+                            <h3>Sofiane ali</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>I cannot emphasize enough the value of the insights provided by this website.
+                        It offers detailed analysis of health data, allowing me to make informed decisions about my patients' care.
+                        It has become an indispensable tool in my practice as a doctor</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- blogs section starts  -->
+
+    <section class="blogs" id="blogs">
+
+        <h1 class="heading"> Some Health <span>Blogs</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="image/blog-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a> <i class="fas fa-calendar"></i> 14th April, 2021 </a>
+                        <a href="https://instagram.com/luqman_lk8"> <i class="fas fa-user"></i> by Prof. R. Ouahab</a>
+                    </div>
+                    <h3>HEALTH ESSENTIALS</h3>
+                    <p>Stay up to date with the latest health trends, expert advice, and essential information for maintaining a healthy lifestyle. Discover valuable tips on nutrition, fitness, mental well-being, and more on Health Essentials</p>
+                    <a href="https://health.clevelandclinic.org/" class="btn"> visit blog <span
+                            class="fas fa-chevron-right"></span> </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="image/blog-2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a> <i class="fas fa-calendar"></i> 17th august, 2021 </a>
+                        <a href="https://instagram.com/luqman_lk8"> <i class="fas fa-user"></i> by Dr. M. Wail</a>
+                    </div>
+                    <h3>CARE AND COST</h3>
+                    <p>Explore the intersection of healthcare and affordability on Care and Cost. This blog provides valuable insights into navigating healthcare systems, understanding medical expenses, insurance options, and practical tips for managing your healthcare costs effectively.</p>
+                    <a href="https://careandcost.com/" class="btn"> visit blog <span
+                            class="fas fa-chevron-right"></span> </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="image/blog-3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a> <i class="fas fa-calendar"></i> 15th july, 2021 </a>
+                        <a href="#https://instagram.com/luqman_lk8"> <i class="fas fa-user"></i> by Dr. A. Nora </a>
+                    </div>
+                    <h3>VITAL SIGNS</h3>
+                    <p>Dive into the world of medical research, breakthroughs, and innovations on Vital Signs. Discover compelling articles on cutting-edge treatments, emerging technologies, and advancements in healthcare that are shaping the future of medicine.</p>
+                    <a href="https://www.modernhealthcare.com/vital-signs-healthcare-blog" class="btn"> visit blog <span
+                            class="fas fa-chevron-right"></span> </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- blogs section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"> <i class="fas fa-chevron-right"></i> home </a>
+                <a href="#services"> <i class="fas fa-chevron-right"></i> services </a>
+                <a href="#about"> <i class="fas fa-chevron-right"></i> about </a>
+                <a href="#contact"> <i class="fas fa-chevron-right"></i> contact </a>
+                <a href="#review"> <i class="fas fa-chevron-right"></i> review </a>
+                <a href="#blogs"> <i class="fas fa-chevron-right"></i> blogs </a>
+            </div>
+
+            <div class="box">
+                <h3>our blogs</h3>
+                <a href="https://health.clevelandclinic.org/"> <i class="fas fa-chevron-right"></i> HEALTH
+                    ESSENTIALS</a>
+                <a href="https://careandcost.com/"> <i class="fas fa-chevron-right"></i> CARE AND COST </a>
+                <a href="https://www.modernhealthcare.com/vital-signs-healthcare-blog"> <i
+                        class="fas fa-chevron-right"></i> VITAL SIGNS </a>
+                <a href="https://www.himss.org/resources/healthcare-informatics"> <i class="fas fa-chevron-right"></i>
+                    HEALTHCARE INFORMATICS </a>
+                <a href="https://www.healthaffairs.org/blog"> <i class="fas fa-chevron-right"></i> HEALTH AFFAIRS BLOG
+                </a>
+                <a href="https://lifeinthefastlane.com/"> <i class="fas fa-chevron-right"></i> LIFE IN THE FAST LANE
+                </a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a><i class="fas fa-phone"></i> (+213) 558 66 95 67 </a>
+                <a> <i class="fa fa-globe"></i>www.maduostud.io</a>
+                <a> <i class="fas fa-envelope"></i>maduostudio@gmail.com</a>
+                <a> <i class="fas fa-map-marker-alt"></i> Cité Ezouhour Batna, Algeria </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a> <i class="fab fa-twitter"></i> twitter </a>
+                <a> <i class="fab fa-instagram"></i> instagram </a>
+                <a> <i class="fab fa-linkedin"></i> linkedin </a>
+            </div>
+
+        </div>
+
+        <div class="credit">
+            <span>Created by Maduo Studio</span>
+            <img src="image/logo.png" class="our-logo">
+            <span>All rights reserved</span>
+        </div>
+
+    </section>
+
+    <!-- footer section ends -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+
+    <!-- Ketika Submit di klik,reset form,munculkan alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        function myFunction() {
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+
+                    cancelButton: 'btn btn-danger',
+                    confirmButton: 'btn btn-success',
+                },
+                buttonsStyling: false
+            })
+
+            swalWithBootstrapButtons.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, send it!',
+                cancelButtonText: 'No, cancel!',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.getElementById("myForm").reset();
+                    swalWithBootstrapButtons.fire(
+                        'Thank You!',
+                        'We have received your message',
+                        'success'
+                    )
+                } else if (
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    document.getElementById("myForm").reset();
+                    swalWithBootstrapButtons.fire(
+                        'Cancelled',
+                        'Your message has been cancelled',
+                        'error'
+                    )
+                }
+            })
+        }
+    </script>
+
+</body>
+
+</html>
