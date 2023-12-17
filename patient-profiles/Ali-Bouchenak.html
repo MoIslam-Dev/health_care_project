@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patient Profile</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <div id="fullpage">
+        <div class="section">
+            <!-- Content for Page 1 -->
+            <div class="wrapper">
+                <div class="left">
+                    <img src="" alt="user" id="profileImage">
+                    <h4 id="patientName"></h4>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <h3>General Information</h3>
+                        <div class="info_data">
+                            <div class="data">
+                                <h4>Gender</h4>
+                                <p id="gender"></p>
+                            </div>
+                            <div class="data">
+                                <h4>Age</h4>
+                                <p id="age"></p>
+                            </div>
+                            <div class="data">
+                                <h4>Phone</h4>
+                                <p id="phone"></p>
+                            </div>
+                        </div>
+                        <div class="info_data">
+                            <div class="data">
+                                <h4>Last Consultation:</h4>
+                                <p id="last_consultation"></p>
+                            </div>
+                            <div class="data">
+                                <h4>Birth Date:</h4>
+                                <p id="birth_date"></p>
+                            </div>
+                            <div class="data">
+                                <h4>Birth Place:</h4>
+                                <p id="birth_place"></p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects">
+                        <h3>Extra information</h3>
+
+                        <div class="projects_data">
+                            <div class="data">
+                                <h4>Blood Type</h4>
+                                <p id="blood_type"></p>
+                            </div>
+                            <div class="data">
+                                <h4>Insurance Number</h4>
+                                <p id="insurance_number"></p>
+                            </div>
+                            <div class="data">
+                                <h4>Birth Certificate Number</h4>
+                                <p id="birth_certificate_number"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <!-- Content for Page 2-->
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+
+                        <div class="card swiper-slide">
+                            <div class="Healthcare-insights">
+                                <h3>Healthcare insights</h3>
+
+                                <div class="vaccine">
+                                    <h3>Vaccines </h3>
+                                    <div class="example">
+                                        <p>Name: COVID-19 Vaccine</p>
+                                        <p>Date: March 15, 2022</p>
+                                    </div>
+                                    <div class="example">
+                                        <p>Name: Influenza Vaccine</p>
+                                        <p>Date: October 1, 2022</p>
+                                    </div>
+                                    <div class="example">
+                                        <p>Name: Hepatitis B Vaccine</p>
+                                        <p>Date: May 20, 2023</p>
+                                    </div>
+                                    <div class="example">
+                                        <p>Name: Tetanus Vaccine</p>
+                                        <p>Date: August 10, 2023</p>
+                                    </div>
+                                    <div class="example">
+                                        <p>Name: Measles, Mumps, and Rubella (MMR) Vaccine</p>
+                                        <p>Date: January 5, 2024</p>
+                                    </div>
+                                </div>
+                                <div class="allergies">
+                                    <h3>Allergies </h3>
+                                    <div class="example">
+                                        <p>Name: Pollen</p>
+                                        <p>Date: March 15, 2022</p>
+                                    </div>
+                                    <div class="example">
+                                        <p>Name: Penicillin</p>
+                                        <p>Date: October 1, 2022</p>
+                                    </div>
+                                    <div class="example">
+                                        <p>Name: Dust Mites</p>
+                                        <p>Date: May 20, 2023</p>
+                                    </div>
+                                    <div class="example">
+                                        <p>Name: Peanuts</p>
+                                        <p>Date: August 10, 2023</p>
+                                    </div>
+                                    <div class="example">
+                                        <p>Name: Shellfish</p>
+                                        <p>Date: January 5, 2024</p>
+                                    </div>
+                                </div>
+                                <div class="diseases">
+                                    <div class="diseases-title">
+                                        <h3>Diseases </h3>
+                                    </div>
+                                    <div class="diseases-list">
+                                        <div class="example">
+                                            <p>Name: Diabetes</p>
+                                            <p>Date: March 15, 2022</p>
+                                        </div>
+                                        <div class="example">
+                                            <p>Name: Asthma</p>
+                                            <p>Date: October 1, 2022</p>
+                                        </div>
+                                        <div class="example">
+                                            <p>Name: Hypertension</p>
+                                            <p>Date: May 20, 2023</p>
+                                        </div>
+                                        <div class="example">
+                                            <p>Name: Arthritis</p>
+                                            <p>Date: August 10, 2023</p>
+                                        </div>
+                                        <div class="example">
+                                            <p>Name: Cancer</p>
+                                            <p>Date: January 5, 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card swiper-slide">
+
+                            <!-- Consultation Content -->
+                            <div class="consultation-section">
+                                <h3>Medication Document</h3>
+
+
+
+                                <div class="consultation-info">
+                                    <p>Date of Consultation: <span id="date">June 19, 2023</span></p>
+                                    <p>Doctor's Name: <span id="doctor">Dr. John Doe</span></p>
+                                </div>
+
+
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Number of Consultation</th>
+                                            <th>Medication Name</th>
+                                            <th>Dose</th>
+                                            <th>Time of Day</th>
+                                            <th>Period</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Paracetamol</td>
+                                            <td>500 mg</td>
+                                            <td>
+                                                <ul>
+                                                    <li>In the morning</li>
+                                                    <li>In the afternoon</li>
+                                                    <li>In the evening</li>
+                                                </ul>
+                                            </td>
+                                            <td>5 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Amoxicillin</td>
+                                            <td>250 mg</td>
+                                            <td>
+                                                <ul>
+                                                    <li>In the morning</li>
+                                                </ul>
+                                            </td>
+                                            <td>7 days</td>
+                                        </tr>
+                                        <!-- Add more rows for additional medications -->
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="5" class="centered-cell">
+                                                <!-- Adjust the colspan based on the number of columns in your table -->
+                                                <div class="note">
+                                                    <p>Additional notes go here</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+
+
+
+                                <div class="consultation-info">
+                                    <p>Date of Consultation: <span id="date">June 19, 2023</span></p>
+                                    <p>Doctor's Name: <span id="doctor">Dr. John Doe</span></p>
+                                </div>
+
+
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Number of Consultation</th>
+                                            <th>Medication Name</th>
+                                            <th>Dose</th>
+                                            <th>Time of Day</th>
+                                            <th>Period</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Paracetamol</td>
+                                            <td>500 mg</td>
+                                            <td>
+                                                <ul>
+                                                    <li>In the morning</li>
+                                                    <li>In the afternoon</li>
+                                                    <li>In the evening</li>
+                                                </ul>
+
+                                            </td>
+                                            <td>5 days</td>
+                                        </tr>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="5" class="centered-cell">
+                                                <!-- Adjust the colspan based on the number of columns in your table -->
+                                                <div class="note">
+                                                    <p>Additional notes go here</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+
+
+
+
+
+
+
+                                    <!-- Add more rows for additional medications -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+
+
+
+                        </div>
+                        <div class="card swiper-slide">
+
+                            <!-- Scanner and Medication Document -->
+                            <div class="slide-scrollable">
+                                <div class="document-section">
+                                    <h3>Medication Document</h3>
+                                    <div class="document-image">
+                                        <img src="../image/scanner1.jpg">
+                                        <div class="document-info-container">
+                                            <p class="document-info"><span>Type:</span> Scanner</p>
+                                            <p class="document-info"><span>Date:</span> June 9, 2023</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="comment-section">
+                                        <h3>Comments</h3>
+                                        <div class="doctor-comment">
+                                            <p><strong>Bouzebra Fouad:</strong> The scan results show no abnormalities.
+                                            </p>
+                                        </div>
+                                        <div class="user-input">
+                                            <textarea placeholder="Enter your comment"></textarea>
+                                            <button class="button">Submit</button>
+                                        </div>
+                                    </div>
+                                    <div class="document-image">
+                                        <img src="../image/irm_cardiaque.jpg">
+                                        <div class="document-info-container">
+                                            <p class="document-info"><span>Type:</span> IRM</p>
+                                            <p class="document-info"><span>Date:</span> June 9, 2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="comment-section">
+                                        <h3>Comments</h3>
+                                        <div class="doctor-comment">
+                                            <p><strong>Abdelmoumen Aymen:</strong> The IRM scan reveals a minor
+                                                inflammation in the patient's cardiac region.</p>
+
+
+                                        </div>
+                                        <div class="user-input">
+                                            <textarea placeholder="Enter your comment"></textarea>
+                                            <button class="button">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
+
+
+
+            </div>
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script>
+            new fullpage('#fullpage', {
+                verticalCentered: true,
+
+
+                navigation: true,
+            });
+        </script>
+        <!-- JavaScript -->
+        <script src="../js/full_profile_patient.js/script.js"></script>
+      
+
+        <script>
+           // Function to fetch patient data from the backend
+async function fetchPatientData(patientId) {
+    try {
+        const response = await fetch(`http://localhost:4000/full_patient_profile/${patientId}`);
+        const data = await response.json();
+        return data[0]; // Assuming the response is an array with one object
+    } catch (error) {
+        console.error("Error fetching patient data:", error);
+        throw error; // Re-throw the error for further handling
+    }
+}
+
+// Function to calculate age based on birthdate
+function calculateAge(birthDate) {
+    const currentDate = new Date();
+    const birthDateObj = new Date(birthDate);
+    const age = currentDate.getFullYear() - birthDateObj.getFullYear();
+    return age;
+}
+
+// Function to format a date to a readable string
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleDateString();
+}
+
+// Function to update HTML elements with patient data
+function updatePatientInfo(data) {
+    document.getElementById('profileImage').src = data.picture;
+    document.getElementById('patientName').innerText = `${data.first_name} ${data.last_name}`;
+    document.getElementById('gender').innerText = data.gender;
+    document.getElementById('age').innerText = calculateAge(data.birthdate);
+    document.getElementById('phone').innerText = data.phone_number;
+    document.getElementById('last_consultation').innerText = formatDate(data.last_consultation);
+    document.getElementById('birth_date').innerText = formatDate(data.birthdate);
+    document.getElementById('birth_place').innerText = data.birth_place;
+    document.getElementById('blood_type').innerText = data.blood_type;
+    document.getElementById('insurance_number').innerText = data.insurrance_number;
+    document.getElementById('birth_certificate_number').innerText = data.birth_certificate_number;
+}
+
+// Replace "p001" with the actual patient ID you want to retrieve
+const patientId = "P007"; // Use lowercase "p001"
+
+// Fetch patient data and update UI
+fetchPatientData(patientId)
+    .then(data => {
+        console.log("Patient Data:", data);
+        updatePatientInfo(data);
+    })
+    .catch(error => {
+        // Handle the error gracefully, for example, by displaying an error message to the user
+        console.error("Failed to fetch patient data:", error);
+    });
+
+        </script>
+    </body>
+
+</html>

@@ -34,3 +34,29 @@ var swiper = new Swiper(".review-slider", {
         },
     },
 });
+
+    // Example using Fetch API
+const form = document.querySelector('form');
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  console.log('Form submitted!');
+  const formData = new FormData(form);
+  const response = await fetch('http://localhost:4000/authenticate', {
+    method: 'POST',
+    body: formData,
+  });
+
+  if (response.ok) {
+    // Handle successful login
+    const data = await response.json();
+    console.log('Login successful:', data);
+    // Redirect to the user's profile or another page
+  } else {
+    // Handle login failure
+    const error = await response.text();
+    console.error('Login failed:', error);
+    // Display an error message to the user
+  }
+});
+

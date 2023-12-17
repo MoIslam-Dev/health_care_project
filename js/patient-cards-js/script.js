@@ -129,3 +129,64 @@ function restoreCardOrder() {
 // Add event listener to the restore order button
 const restoreOrderButton = document.getElementById('restore-order');
 restoreOrderButton.addEventListener('click', restoreCardOrder);
+document.addEventListener("DOMContentLoaded", function () {
+  // Use fetch or another method to get data from your API
+  fetch('http://localhost:4000/doctor_followups/D001')
+    .then(response => response.json())
+    .then(data => {
+      // Iterate through the data and dynamically create cards
+      data.forEach(patient => {
+        const cardWrapper = document.querySelector('.card-wrapper');
+
+        const card = document.createElement('div');
+        card.classList.add('card', 'swiper-slide');
+
+        card.innerHTML =
+          '<div class="image-content">' +
+          '<span class="overlay"></span>' +
+          '<div class="card-image">' +
+          '<img src="' + patient.picture + '" alt="" class="card-img">' +
+          '</div>' +
+          '</div>' +
+          '<div class="card-content">' +
+          '<h2 class="name">' + patient.first_name + ' ' + patient.last_name + '</h2>' +
+          '<p class="extra-data">Age: ' + calculateAge(patient.birthdate) + '</p>' +
+          '<p class="extra-data">Gender: ' + patient.gender + '</p>' +
+          '<p class="extra-data">Last consultation: <span class="date">' + formatDate(patient.last_consultation) + '</span></p>' +
+          '<div class="buttons-container">' +
+          '<div class="patient-buttons">' +
+          '<a href="patient-profiles/' + generateProfileUrl(patient) + '"><button class="button">Full profile</button></a>' +
+          '<a href="consultation-page.html"><button class="button">New consultation</button></a>' +
+          '</div>' +
+          '</div>' +
+          '</div>';
+
+        cardWrapper.appendChild(card);
+      });
+    })
+    .catch(error => console.error('Error fetching data:', error));
+});
+
+    
+    // Helper function to calculate age
+    function calculateAge(birthdate) {
+        // Implement the logic to calculate age from birthdate
+        // For simplicity, let's assume birthdate is in the format 'YYYY-MM-DD'
+        const birthYear = new Date(birthdate).getFullYear();
+        const currentYear = new Date().getFullYear();
+        return currentYear - birthYear;
+    }
+    
+    // Helper function to format date
+    function formatDate(dateString) {
+        // Implement the logic to format the date as needed
+        // For simplicity, let's assume dateString is in the format 'YYYY-MM-DD'
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+    }
+    
+    // Helper function to generate profile URL
+    function generateProfileUrl(patient) {
+        // Implement the logic to generate the profile URL as needed
+        return `${patient.first_name}-${patient.last_name}.html`;
+    }

@@ -91,8 +91,8 @@
 
             <div class="wrapper">
                 <div class="left">
-                  <img src="image/doc-1.jpg" alt="user">
-                  <h4 id="doctorName">Benali Mohamed</h4>
+                  <img src="" alt="user" id="doctorImage">
+                  <h4 id="doctorName"></h4>
                 </div>
                 <div class="right">
                   <div class="info">
@@ -100,29 +100,29 @@
                     <div class="info_data">
                       <div class="data">
                         <h4>Gender</h4>
-                        <p id="gender">Male</p>
+                        <p id="gender"></p>
                       </div>
                       <div class="data">
                         <h4>Age</h4>
-                        <p id="age">43</p>
+                        <p id="age"></p>
                       </div>
                       <div class="data">
                         <h4>Phone</h4>
-                        <p id="phone">0669436125</p>
+                        <p id="phone"></p>
                       </div>
                     </div>
                     <div class="info_data">
                       <div class="data">
                         <h4>Last Authentication:</h4>
-                        <p id="lastAuth">2023-01-03.12:04:36</p>
+                        <p id="lastAuth"></p>
                       </div>
                       <div class="data">
                         <h4>Birthdate:</h4>
-                        <p id="birthdate">1980-02-15</p>
+                        <p id="birthdate"></p>
                       </div>
                       <div class="data">
                         <h4>Birthplace:</h4>
-                        <p id="birthplace">Constantine</p>
+                        <p id="birthplace"></p>
                       </div>
                     </div>
                   </div>
@@ -131,17 +131,17 @@
                     <div class="projects_data">
                       <div class="data">
                         <h4>Grade</h4>
-                        <p id="grade">General Practitioner</p>
+                        <p id="grade"></p>
                       </div>
                       <div class="data">
                         <h4>Medical Facility</h4>
-                        <p id="medicalFacility">Oran City Clinic</p>
+                        <p id="medicalFacility"></p>
                       </div>
                     </div>
                     <div class="projects_data">
                       <div class="data">
                         <h4>Specialty</h4>
-                        <p id="specialty">Family Medicine</p>
+                        <p id="specialty"></p>
                       </div>
                     </div>
                   </div>
@@ -153,28 +153,9 @@
                   </div>
                 </div>
               </div>
-            
-  <script>
-    // Fetch data from the Node.js backend
-    fetch('/full_doctor_profile') // Replace with your actual backend endpoint
-      .then(response => response.json())
-      .then(data => {
-        // Populate the doctor's card with the fetched data
-        document.getElementById('doctorName').textContent = data.name;
-        document.getElementById('gender').textContent = data.gender;
-        document.getElementById('age').textContent = data.age;
-        document.getElementById('phone').textContent = data.phone;
-        document.getElementById('lastAuth').textContent = data.lastAuthentication;
-        document.getElementById('birthdate').textContent = data.birthdate;
-        document.getElementById('birthplace').textContent = data.birthplace;
-        document.getElementById('grade').textContent = data.grade;
-        document.getElementById('medicalFacility').textContent = data.medicalFacility;
-        document.getElementById('specialty').textContent = data.specialty;
-      })
-      .catch(error => {
-        console.log('Error fetchingdata:', error);
-      });
-  </script>
+              
+
+          
         </div>
 
         <div class="section">
@@ -205,184 +186,17 @@
                     </div>
                 </div>
             </div>
-
             <div class="slide-container swiper">
                 <div class="slide-content">
-                    <div class="card-wrapper swiper-wrapper">
-
-                        <div class="card swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
-                                <div class="card-image">
-                                    <img src="patient-images/Nadia Belkacem.jpg" alt="" class="card-img">
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <h2 class="name">Nadia Belkacem</h2>
-
-                                <!-- Extra Data -->
-                                <p class="extra-data">Age: 23</p>
-                                <p class="extra-data">Gender: Female</p>
-                                <p class="extra-data">Last consultation: <span class="date">2023-06-15</span></p>
-
-                                <div class="buttons-container">
-                                    <div class="patient-buttons">
-                                        <a href="patient-profiles/Nadia-Belkacem.html"><button class="button">Full profile</button></a>
-                                        <a href="consultation-page.html"><button class="button">New consultation</button></a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="card swiper-slide">
-
-                            <!-- Patient 2 -->
-                            <div class="image-content">
-                                <span class="overlay"></span>
-                                <div class="card-image">
-                                    <img src="patient-images/Fatima Khaled.jpg" alt="" class="card-img">
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-                                <h2 class="name">Fatima Khaled</h2>
-
-                                <!-- Extra Data -->
-                                <p class="extra-data">Age: 29</p>
-                                <p class="extra-data">Gender: Female</p>
-                                <p class="extra-data">Last consultation: <span class="date">2023-06-01</span></p>
-                                <div class="buttons-container">
-                                    <div class="patient-buttons">
-                                        <a href="patient-profiles/Fatima-Khaled.html"><button class="button">Full profile</button></a>
-                                        <a href="consultation-page.html"><button class="button">New consultation</button></a>
-                                    </div>
-
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <div class="card swiper-slide">
-
-                            <!-- Patient 3 -->
-                            <div class="image-content">
-                                <span class="overlay"></span>
-                                <div class="card-image">
-                                    <img src="patient-images/Hassan Ahmed.jpg" alt="" class="card-img">
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-                                <h2 class="name">Hassan Ahmed</h2>
-
-                                <!-- Extra Data -->
-                                <p class="extra-data">Age: 18</p>
-                                <p class="extra-data">Gender: Male</p>
-                                <p class="extra-data">Last consultation: <span class="date">2022-09-15</span> </p>
-
-
-                                <div class="buttons-container">
-                                    <div class="patient-buttons">
-                                        <a href="patient-profiles/Hassan-Ahmed.html"><button class="button">Full profile</button></a>
-                                        <a href="consultation-page.html"><button class="button">New consultation</button></a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card swiper-slide">
-                            <!-- Patient 4 -->
-                            <div class="image-content">
-                                <span class="overlay"></span>
-                                <div class="card-image">
-                                    <img src="patient-images/Ali Bouzid.jpg" alt="" class="card-img">
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <h2 class="name">Ali Bouzid</h2>
-
-                                <!-- Extra Data -->
-                                <p class="extra-data">Age: 32</p>
-                                <p class="extra-data">Gender: Male</p>
-                                <p class="extra-data">Last consultation:<span class="date"> 2023-07-07</span></p>
-
-                                <div class="buttons-container">
-                                    <div class="patient-buttons">
-                                        <a href="patient-profiles/Ali-Bouzid.html"><button class="button">Full profile</button></a>
-                                        <a href="consultation-page.html"><button class="button">New consultation</button></a>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card swiper-slide">
-                            <!-- Patient 5 -->
-                            <div class="image-content">
-                                <span class="overlay"></span>
-                                <div class="card-image">
-                                    <img src="patient-images/Amir Salah.jpg" alt="" class="card-img">
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-                                <h2 class="name">Amir Salah</h2>
-
-                                <!-- Extra Data -->
-                                <p class="extra-data">Age: 38</p>
-                                <p class="extra-data">Gender: Male</p>
-                                <p class="extra-data">Last consultation: <span class="date">2023-01-03</span></p>
-
-                                <div class="buttons-container">
-                                    <div class="patient-buttons">
-                                        <a href="patient-profiles/Amir-Salah.html"><button class="button">Full profile</button></a>
-                                        <a href="consultation-page.html"><button class="button">New consultation</button></a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card swiper-slide">
-
-                            <!-- Patient 6 -->
-                            <div class="image-content">
-                                <span class="overlay"></span>
-                                <div class="card-image">
-                                    <img src="patient-images/Samira Benali.jpg" alt="" class="card-img">
-                                </div>
-                            </div>
-
-                            <div class="card-content">
-                                <h2 class="name">Samira Benali</h2>
-
-                                <!-- Extra Data -->
-                                <p class="extra-data">Age: 20</p>
-                                <p class="extra-data">Gender: Female</p>
-                                <p class="extra-data">Last cosultation: <span class="date">2023-04-22</span></p>
-
-
-                                <div class="buttons-container">
-                                    <div class="patient-buttons">
-                                        <a href="patient-profiles/Samira-Benali.html"><button class="button">Full profile</button>
-                                        </a>
-                                        <a href="consultation-page.html"><button class="button">New
-                                                consultation</button></a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  <div class="card-wrapper swiper-wrapper">
+                    <!-- Use JavaScript to dynamically generate these cards -->
+                  </div>
                 </div>
-
+            
                 <div class="swiper-button-next swiper-navBtn"></div>
                 <div class="swiper-button-prev swiper-navBtn"></div>
                 <div class="swiper-pagination"></div>
-
-
-            </div>
+              </div>
             <div id="no-results-message" class="no-results-message">
                 No results found.
             </div>
@@ -443,7 +257,52 @@
             }
         });
     </script>
+<!-- Include this script in your HTML file -->
+<script>
+// Function to fetch doctor data from the API
+async function fetchDoctorData(doctorId) {
+    try {
+        const response = await fetch(`http://localhost:4000/full_doctor_profile/${doctorId}`);
+        const data = await response.json();
+        return data[0]; // Assuming the response is an array with one object
+    } catch (error) {
+        console.error("Error fetching doctor data:", error);
+        throw error; // Re-throw the error for further handling
+    }
+}
 
+// Function to update HTML elements with doctor data
+function updateDoctorInfo(data) {
+    document.getElementById('doctorImage').src = data.picture;
+    document.getElementById('doctorName').innerText = `${data.first_name} ${data.last_name}`;
+    document.getElementById('gender').innerText = data.gender;
+    document.getElementById('age').innerText = calculateAge(data.birthdate);
+    document.getElementById('phone').innerText = data.phone_number;
+    document.getElementById('lastAuth').innerText = formatDate(data.last_authentication);
+    document.getElementById('birthdate').innerText = formatDate(data.birthdate);
+    document.getElementById('birthplace').innerText = data.birth_place;
+    document.getElementById('grade').innerText = data.grade;
+    document.getElementById('medicalFacility').innerText = data.medical_facility_name;
+    document.getElementById('specialty').innerText = data.specialty_name;
+}
+
+// Replace "D001" with the actual doctor ID you want to retrieve
+const doctorId = "D001"; // Use uppercase "D001"
+
+// Fetch doctor data and update UI
+fetchDoctorData(doctorId)
+    .then(data => {
+        console.log("Doctor Data:", data);
+        updateDoctorInfo(data);
+    })
+    .catch(error => {
+        // Handle the error gracefully, for example, by displaying an error message to the user
+        console.error("Failed to fetch doctor data:", error);
+    });
+
+
+    </script>
+    
     <!-- JavaScript -->
     <script src="js/patient-cards-js/script.js"></script>
 

@@ -18,9 +18,8 @@
             <!-- Content for Page 1 -->
             <div class="wrapper">
                 <div class="left">
-                    <img src="../patient-images/Fatima Khaled.jpg" alt="user">
-                    <h4>Fatima Khaled</h4>
-
+                    <img src="" alt="user" id="profileImage">
+                    <h4 id="patientName"></h4>
                 </div>
                 <div class="right">
                     <div class="info">
@@ -28,30 +27,29 @@
                         <div class="info_data">
                             <div class="data">
                                 <h4>Gender</h4>
-                                <p>Female</p>
+                                <p id="gender"></p>
                             </div>
                             <div class="data">
                                 <h4>Age</h4>
-                                <p>29</p>
+                                <p id="age"></p>
                             </div>
                             <div class="data">
                                 <h4>Phone</h4>
-                                <p>0580625480</p>
-
+                                <p id="phone"></p>
                             </div>
                         </div>
                         <div class="info_data">
                             <div class="data">
                                 <h4>Last Consultation:</h4>
-                                <p>July 05, 2023</p>
+                                <p id="last_consultation"></p>
                             </div>
                             <div class="data">
                                 <h4>Birth Date:</h4>
-                                <p>January 03, 1992</p>
+                                <p id="birth_date"></p>
                             </div>
                             <div class="data">
                                 <h4>Birth Place:</h4>
-                                <p>Setif, Eulma</p>
+                                <p id="birth_place"></p>
 
                             </div>
                         </div>
@@ -59,20 +57,19 @@
 
                     <div class="projects">
                         <h3>Extra information</h3>
-                      
-                    
+
                         <div class="projects_data">
-                              <div class="data">
+                            <div class="data">
                                 <h4>Blood Type</h4>
-                                <p>B-</p>
+                                <p id="blood_type"></p>
                             </div>
                             <div class="data">
                                 <h4>Insurance Number</h4>
-                                <p>914093003524</p>
+                                <p id="insurance_number"></p>
                             </div>
                             <div class="data">
                                 <h4>Birth Certificate Number</h4>
-                                <p>480222668424</p>
+                                <p id="birth_certificate_number"></p>
                             </div>
                         </div>
                     </div>
@@ -165,13 +162,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
-
 
                         </div>
                         <div class="card swiper-slide">
@@ -306,7 +296,7 @@
                                 <div class="document-section">
                                     <h3>Medication Document</h3>
                                     <div class="document-image">
-                                        <img src="../image/scanner1.jpg" >
+                                        <img src="../image/scanner1.jpg">
                                         <div class="document-info-container">
                                             <p class="document-info"><span>Type:</span> Scanner</p>
                                             <p class="document-info"><span>Date:</span> June 9, 2023</p>
@@ -316,7 +306,8 @@
                                     <div class="comment-section">
                                         <h3>Comments</h3>
                                         <div class="doctor-comment">
-                                            <p><strong>Bouzebra Fouad:</strong> The scanner results show no abnormalities.</p>
+                                            <p><strong>Bouzebra Fouad:</strong> The scan results show no abnormalities.
+                                            </p>
                                         </div>
                                         <div class="user-input">
                                             <textarea placeholder="Enter your comment"></textarea>
@@ -324,7 +315,7 @@
                                         </div>
                                     </div>
                                     <div class="document-image">
-                                        <img src="../image/irm_cardiaque.jpg" >
+                                        <img src="../image/irm_cardiaque.jpg">
                                         <div class="document-info-container">
                                             <p class="document-info"><span>Type:</span> IRM</p>
                                             <p class="document-info"><span>Date:</span> June 9, 2023</p>
@@ -333,10 +324,11 @@
                                     <div class="comment-section">
                                         <h3>Comments</h3>
                                         <div class="doctor-comment">
-                                            <p><strong>Abdelmoumen Aymen:</strong> The IRM scan reveals a minor inflammation in the patient's cardiac region.</p>
-                                            
-                                            
-                                          </div>
+                                            <p><strong>Abdelmoumen Aymen:</strong> The IRM scan reveals a minor
+                                                inflammation in the patient's cardiac region.</p>
+
+
+                                        </div>
                                         <div class="user-input">
                                             <textarea placeholder="Enter your comment"></textarea>
                                             <button class="button">Submit</button>
@@ -377,6 +369,65 @@
         </script>
         <!-- JavaScript -->
         <script src="../js/full_profile_patient.js/script.js"></script>
-</body>
+      
+
+        <script>
+           // Function to fetch patient data from the backend
+async function fetchPatientData(patientId) {
+    try {
+        const response = await fetch(`http://localhost:4000/full_patient_profile/${patientId}`);
+        const data = await response.json();
+        return data[0]; // Assuming the response is an array with one object
+    } catch (error) {
+        console.error("Error fetching patient data:", error);
+        throw error; // Re-throw the error for further handling
+    }
+}
+
+// Function to calculate age based on birthdate
+function calculateAge(birthDate) {
+    const currentDate = new Date();
+    const birthDateObj = new Date(birthDate);
+    const age = currentDate.getFullYear() - birthDateObj.getFullYear();
+    return age;
+}
+
+// Function to format a date to a readable string
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleDateString();
+}
+
+// Function to update HTML elements with patient data
+function updatePatientInfo(data) {
+    document.getElementById('profileImage').src = data.picture;
+    document.getElementById('patientName').innerText = `${data.first_name} ${data.last_name}`;
+    document.getElementById('gender').innerText = data.gender;
+    document.getElementById('age').innerText = calculateAge(data.birthdate);
+    document.getElementById('phone').innerText = data.phone_number;
+    document.getElementById('last_consultation').innerText = formatDate(data.last_consultation);
+    document.getElementById('birth_date').innerText = formatDate(data.birthdate);
+    document.getElementById('birth_place').innerText = data.birth_place;
+    document.getElementById('blood_type').innerText = data.blood_type;
+    document.getElementById('insurance_number').innerText = data.insurrance_number;
+    document.getElementById('birth_certificate_number').innerText = data.birth_certificate_number;
+}
+
+// Replace "p001" with the actual patient ID you want to retrieve
+const patientId = "P005"; // Use lowercase "p001"
+
+// Fetch patient data and update UI
+fetchPatientData(patientId)
+    .then(data => {
+        console.log("Patient Data:", data);
+        updatePatientInfo(data);
+    })
+    .catch(error => {
+        // Handle the error gracefully, for example, by displaying an error message to the user
+        console.error("Failed to fetch patient data:", error);
+    });
+
+        </script>
+    </body>
 
 </html>
